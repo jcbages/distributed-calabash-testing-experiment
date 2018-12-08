@@ -9,7 +9,9 @@ end
 After do |scenario|
   # save logs from adb
   `mkdir $REPORT_PATH/#{scenario.name.downcase.tr(' ', '_')}`
-  `#{adb_command} logcat -v time 2>&1 -d > $REPORT_PATH/#{scenario.name.downcase.tr(' ', '_')}/sys_log.txt`
+  `#{adb_command} logcat -v time -d \
+  > $REPORT_PATH/#{scenario.name.downcase.tr(' ', '_')}/sys_log.out.txt \
+  2> $REPORT_PATH/#{scenario.name.downcase.tr(' ', '_')}/sys_log.err.txt`
   
   if scenario.failed?
     screenshot_embed

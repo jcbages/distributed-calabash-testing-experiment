@@ -2,3 +2,5 @@ logs/
 screenshots/
 test_servers/
 .DS_Store
+status.txt
+output.txt

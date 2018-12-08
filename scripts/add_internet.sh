@@ -1,3 +1,5 @@
+# USE FROM INSIDE MUTANTS FOLDER
+
 for folder in */ ; do
     # get in folder
     cd $folder
