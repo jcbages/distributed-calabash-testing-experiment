@@ -9,11 +9,10 @@ end
 After do |scenario|
   # save logs from adb
   scenario_name = scenario.name.downcase.tr(' ', '_')
-  
-  `mkdir logs`
-  `mkdir logs/#{scenario_name}`
-  `#{adb_command} logcat -v time 2>&1 -d > 'logs/#{scenario_name}/sys_log.txt'`  
-  embed('sys_log.txt', 'text/plain', 'sys_log.txt')
+  log_path = `#{scenario_name}.log.txt`
+
+  `#{adb_command} logcat -v time 2>&1 -d > logs/sys_log.txt`
+  # embed(log_path, 'text/plain', 'log.txt')
 
   if scenario.failed?
     screenshot_embed
