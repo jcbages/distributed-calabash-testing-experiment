@@ -8,15 +8,14 @@ rm report.html
 # create folders again
 echo " [x] Creating new folders"
 mkdir logs
-chmod 777 logs
 mkdir screenshots
-chmod 777 logs
 
 # run calabash test with given apk
 echo " [x] Running calabash"
 SCREENSHOT_PATH=screenshots/ \
-calabash-android run ../mutants/$1/mileage.apk
-#calabash-android run ../mutants/$1/mileage.apk --format html --out report.html
+REPORT_PATH=logs \
+calabash-android run ../mutants/$1/mileage.apk --format html --out report.html
+#calabash-android run ../mutants/$1/mileage.apk
 
 # move results to folder
 echo " [x] Moving results"

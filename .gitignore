@@ -1,3 +1,4 @@
 logs/
 screenshots/
 test_servers/
+.DS_Store
