@@ -7,3 +7,11 @@ end
 Then /^I set orientation to landscape$/ do
     perform_action('set_activity_orientation', 'landscape')
 end
+
+Then /^I take a screenshot named "([^\"]*)"$/ do |name|
+    screenshot(options={:name=>name})
+end
+
+Then /^I print a list of all items$/ do
+    puts query('*')
+end
