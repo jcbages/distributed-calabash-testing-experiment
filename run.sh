@@ -1,3 +1,5 @@
+echo " [x] Starting to processing $1"
+
 # erase old folders
 echo " [x] Removing old folders just in case"
 rm -rf ../results/$1
@@ -25,3 +27,6 @@ mkdir ../results/$1
 mv report.html ../results/$1/
 mv logs ../results/$1/
 mv screenshots ../results/$1/
+
+echo " [x] Finish processing $1"
+echo "*************************"
