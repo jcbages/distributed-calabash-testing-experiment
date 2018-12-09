@@ -14,7 +14,7 @@ mkdir screenshots
 
 # resign calabash apk
 echo " [x] Re-signing apk"
-calabash-android resign ../mutants/$1/mileage.apk
+/usr/share/rvm/gems/ruby-2.3.1/wrappers/calabash-android resign ../mutants/$1/mileage.apk
 
 # run calabash test with given apk
 echo " [x] Running calabash"
