@@ -1,8 +1,3 @@
-export ANDROID_HOME=$HOME/android-sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$ANDROID_HOME/build-tools
-
 echo " [x] Starting to processing $1"
 
 # erase old folders
@@ -25,7 +20,7 @@ calabash-android resign ../mutants/$1/mileage.apk
 echo " [x] Running calabash"
 SCREENSHOT_PATH=screenshots/ \
 REPORT_PATH=logs \
-calabash-android run ../mutants/$1/mileage.apk --format html --out report.html
+/usr/share/rvm/gems/ruby-2.3.1/bin/calabash-android run ../mutants/$1/mileage.apk --format html --out report.html
 #calabash-android run ../mutants/$1/mileage.apk
 
 # move results to folder
