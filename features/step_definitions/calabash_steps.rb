@@ -15,3 +15,7 @@ end
 Then /^I print a list of all items$/ do
     puts query('*')
 end
+
+Then("I wait for {float} seconds") do |float|
+    sleep(float.to_i)
+end
