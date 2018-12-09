@@ -13,7 +13,7 @@ letters = 'abcdefghijklmnopqrstuvwxyz'
 
 a = 0
 b = 1
-for i in range(0, 1):
+for i in range(0, 93):
     suffix = letters[a] + letters[b]
     run = 'python worker.py worker-%s' % suffix
     command = '%s;%s;%s' % (env, chdir, run)
