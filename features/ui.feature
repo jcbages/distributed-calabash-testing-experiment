@@ -2,7 +2,9 @@ Feature: Test UI Components
 
   Scenario: Test device orientation
     Then I set orientation to landscape
+    Then I wait
     Then I take a screenshot named "test_device_orientation__set_landscape"
+    
     Then I set orientation to portrait
     Then I wait
     Then I take a screenshot named "test_device_orientation__set_portrait"
