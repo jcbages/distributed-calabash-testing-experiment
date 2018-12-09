@@ -20,7 +20,8 @@ calabash-android resign ../mutants/$1/mileage.apk
 echo " [x] Running calabash"
 SCREENSHOT_PATH=screenshots/ \
 REPORT_PATH=logs \
-calabash-android run ../mutants/$1/mileage.apk --format html --out report.html
+calabash-android run ../mutants/$1/mileage.apk
+#calabash-android run ../mutants/$1/mileage.apk --format html --out report.html
 #calabash-android run ../mutants/$1/mileage.apk
 
 # move results to folder

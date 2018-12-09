@@ -6,12 +6,12 @@ rm status.txt
 
 # iterate over folders given to worker
 while read mutant; do
-    ./run.sh $mutant >> output.txt 2>&1 # run the test for it
+    ./run.sh $mutant # run the test for it
     echo " [x] Finished $mutant" >> status.txt
 done < workers/$1
 
 # upload results
 echo " [x] Uploading all results"
-./upload.sh $1 >> output.txt 2>&1
+./upload.sh $1
 
 echo " [x] Finished all!" >> status.txt
