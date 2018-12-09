@@ -19,3 +19,7 @@ end
 Then("I wait for {float} seconds") do |float|
     sleep(float.to_i)
 end
+
+Then /^I press back button$/ do
+    Device.press_back_button
+end
