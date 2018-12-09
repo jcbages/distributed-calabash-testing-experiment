@@ -11,7 +11,7 @@ Feature: Test Fillup Feature
     Then I take a screenshot named "interact_with_the_checkbox__unset_checkbox"
 
   Scenario: Write non numeric characters
-    Then I wait for 1.0 second
+    Then I wait for 1.0 seconds
     Then I enter text "-321ßå∂˚¡–ºß123" into field with id "price"
     Then I take a screenshot named "write_non_numeric_characters__write_price"
     Then I enter text "åß9∂º–ç¬  ß29å∂˚¡–ºß123" into field with id "volume"
@@ -20,7 +20,7 @@ Feature: Test Fillup Feature
     Then I take a screenshot named "write_non_numeric_characters__write_odometer"
 
   Scenario: Write zero on editable
-    Then I wait for 1.0 second
+    Then I wait for 1.0 seconds
     Then I enter text "000" into field with id "price"
     Then I press button number 3
     Then I take a screenshot named "write_zero_on_editable__write_price"
@@ -32,22 +32,22 @@ Feature: Test Fillup Feature
     Then I take a screenshot named "write_zero_on_editable__write_odometer"
 
   Scenario: Write good scenario text
-    Then I wait for 1.0 second
+    Then I wait for 1.0 seconds
     Then I enter text "23" into field with id "price"
     Then I take a screenshot named "write_good_scenario_text__write_price"
     Then I enter text "49" into field with id "volume"
     Then I take a screenshot named "write_good_scenario_text__write_volume"
     Then I enter text "12" into field with id "odometer"
     Then I take a screenshot named "write_good_scenario_text__write_odometer"
-    Then I wait for 1.0 second
+    Then I wait for 1.0 seconds
     Then I press button number 3
     Then I take a screenshot named "write_good_scenario_text__save_1"
     Then I select tab number 1
-    Then I wait for 1.0 second
+    Then I wait for 1.0 seconds
     Then I enter text "54" into field with id "price"
     Then I enter text "100" into field with id "volume"
     Then I enter text "14" into field with id "odometer"
-    Then I wait for 1.0 second
+    Then I wait for 1.0 seconds
     Then I press button number 3
     Then I take a screenshot named "write_good_scenario_text__save_2"
     
@@ -65,23 +65,23 @@ Feature: Test Fillup Feature
     Then I take a screenshot named "write_good_scenario_text__no_license"
 
   Scenario: Write large text
-    Then I wait for 1.0 second
+    Then I wait for 1.0 seconds
     Then I enter text "98879898249712372391" into field with id "price"
     Then I take a screenshot named "write_large_text__write_price"
     Then I enter text "98879891284721092831" into field with id "volume"
     Then I take a screenshot named "write_large_text__write_volume"
     Then I enter text "74394723984721092831" into field with id "odometer"
     Then I take a screenshot named "write_large_text__write_odometer"
-    Then I wait for 1.0 second
+    Then I wait for 1.0 seconds
     Then I press button number 3
     Then I take a screenshot named "write_large_text__save_1"
     
     Then I select tab number 1
-    Then I wait for 1.0 second
+    Then I wait for 1.0 seconds
     Then I enter text "97123743947239847210" into field with id "price"
     Then I enter text "98123743947721092831" into field with id "volume"
     Then I enter text "98879898284721092831" into field with id "odometer"
-    Then I wait for 1.0 second
+    Then I wait for 1.0 seconds
     Then I press button number 3
     Then I take a screenshot named "write_large_text__save_2"
 
