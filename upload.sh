@@ -1,4 +1,4 @@
-cd ../practico-results
+cd ../results
 git checkout -b $1
 git add .
 git commit -m "results from $1"
