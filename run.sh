@@ -12,6 +12,10 @@ echo " [x] Creating new folders"
 mkdir logs
 mkdir screenshots
 
+# resign calabash apk
+echo " [x] Re-signing apk"
+calabash-android resign ../mutants/$1/mileage.apk
+
 # run calabash test with given apk
 echo " [x] Running calabash"
 SCREENSHOT_PATH=screenshots/ \
